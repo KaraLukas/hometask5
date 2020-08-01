@@ -17,26 +17,40 @@ time, mark, audio, video{
   font-size: 100%;
   vertical-align: baseline;
 }
+html{
+  height: 100%;
+}
+body{
+  line-height: 1;
+  height: 100%;
+}
 .wrapper{
   width: 1200px;
   margin: 0 auto;
   background: bisque;
 }
+/*just flex test/main menu*/
+.flex-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
 p{
   font-size: 40px;
-  line-height: 50px;
   text-align: center;
 }
 a{
   color: black;
   text-decoration: none;
 }
+/*table-cell*/
 .table_cell{
   background: cadetblue;
   margin: 15px 0 0;
 }
-.table_cell_null, .table_cell_small, .table_cell_middle, .table_cell_big{
-  outline: white solid 1px;
+.table_cell_null, .table_cell_small, .table_cell_middle, .table_cell_big, .ou_line{
+  outline: 1px solid white;
 }
 .table_cell_small{
   width: 200px;
@@ -49,4 +63,88 @@ a{
 .table_cell_big{
   width: 800px;
   display: table-cell;
+}
+/*inline-block*/
+.in_block{
+  margin: 15px 0 0;
+  font-size: 0;
+  background: darkturquoise;
+}
+.in_in_block, .in_block_tech, .in_block-small, .in_block-middle, .in_block-big{
+  outline: 1px solid white;
+  vertical-align: top;
+}
+.in_in_block{
+  font-size: 16px;
+}
+.in_block_tech{
+  font-size: 0;
+}
+.in_block-small{
+  width: 200px;
+  display: inline-block;
+  font-size: 16px;
+}
+.in_block-middle{
+  width: 400px;
+  display: inline-block;
+  font-size: 16px;
+}
+.in_block-big{
+  width: 800px;
+  display: inline-block;
+  font-size: 16px;
+}
+/*float*/
+.float{
+  margin: 15px 0 0;
+  background: chocolate;
+}
+/*bg for clearfix*/
+.bg_clearfix .float{
+  background: darkkhaki;
+}
+.in_float, .float_small, .float_middle, .float_big{
+  outline: 1px solid white;
+}
+.float_small {
+  width: 200px;
+  float: left;
+}
+.float_middle {
+  width: 400px;
+  float: left;
+}
+.float_big {
+  width: 800px;
+  float: left;
+}
+.clear{
+  clear: both;
+}
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+/*flex*/
+.flex{
+  display: flex;
+  background: gold;
+  margin: 15px 0 0;
+}
+.in_flex, .flex_small, .flex_middle, .flex_big{
+  outline: 1px solid white;
+}
+.in_in_flex{
+  display: flex;
+}
+.flex_small{
+  flex: 0 0 200px;
+}
+.flex_middle{
+  flex: 0 0 400px;
+}
+.flex_big{
+  flex: 0 0 800px;
 }
